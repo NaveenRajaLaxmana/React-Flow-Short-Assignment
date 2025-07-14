@@ -46,9 +46,9 @@ This React-based project utilizes [React Flow](https://reactflow.dev/) to visual
 
 ## 📸 Screenshot
 
-![App Screenshot](./assets/assignment-screenshot-1.png)
-![App Screenshot](./assets/assignment-screenshot-2.png)
-![App Screenshot](./assets/assignment-screenshot-3.png)
+![App Screenshot](./assets/assignment-screenshot-1.PNG)
+![App Screenshot](./assets/assignment-screenshot-2.PNG)
+![App Screenshot](./assets/assignment-screenshot-3.PNG)
 
 ---
 
