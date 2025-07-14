@@ -15,12 +15,12 @@ import { useNodeContext } from "./NodeContext";
 
 const Flow = () => {
   const reactFlowWrapper = useRef(null);
-  const [_,setSelectedNode] = useNodeContext();
+  const [_, setSelectedNode] = useNodeContext();
   const initialNodes = [
     {
       id: "n1",
       position: { x: 0, y: 0 },
-      data: { msg: "First Message",onClickTrigger: setSelectedNode },
+      data: { msg: "First Message", onClickTrigger: setSelectedNode },
       type: "textNode",
     },
     {
@@ -36,26 +36,23 @@ const Flow = () => {
   const [type, setType] = useDnD();
   const existingEdges = useEdges();
 
-const onConnect = useCallback(
-  (params) => {
+  const onConnect = useCallback((params) => {
     setEdges((currentEdges) => {
       // Check against current edges in state
       const isSourceAlreadyUsed = currentEdges.some(
         (edge) =>
           edge.source === params.source &&
-          (edge.sourceHandle || 'default') === (params.sourceHandle || 'default')
+          (edge.sourceHandle || "default") ===
+            (params.sourceHandle || "default")
       );
-      
+
       if (!isSourceAlreadyUsed) {
         return addEdge({ ...params }, currentEdges);
       } else {
         return currentEdges; // Return unchanged edges
       }
     });
-  },
-  []
-);
-
+  }, []);
 
   let id = 0;
   const getId = () => `dndnode_${id++}`;
@@ -73,7 +70,7 @@ const onConnect = useCallback(
       if (!type) {
         return;
       }
-      
+
       // project was renamed to screenToFlowPosition
       // and you don't need to subtract the reactFlowBounds.left/top anymore
       // details: https://reactflow.dev/whats-new/2023-11-10
@@ -85,7 +82,7 @@ const onConnect = useCallback(
         id: getId(),
         type,
         position,
-        data: { msg: `${type} node ${id}`,onClickTrigger: setSelectedNode },
+        data: { msg: `${type} node ${id}`, onClickTrigger: setSelectedNode },
       };
 
       setNodes((nds) => nds.concat(newNode));
@@ -98,7 +95,6 @@ const onConnect = useCallback(
     event.dataTransfer.setData("text/plain", nodeType);
     event.dataTransfer.effectAllowed = "move";
   };
-
 
   return (
     <div
@@ -117,7 +113,6 @@ const onConnect = useCallback(
         onDrop={onDrop}
         onDragOver={onDragOver}
         fitView
-      
         onContextMenu={() => setSelectedNode(null)}
       >
         <Background />

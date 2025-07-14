@@ -1,10 +1,8 @@
 import { Handle, Position } from "@xyflow/react";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 import { RiWhatsappFill } from "react-icons/ri";
-import { useNodeContext } from "./NodeContext";
 
 const TextNode = ({ id, data, isConnectable }) => {
- 
   return (
     <>
       <Handle
@@ -15,7 +13,7 @@ const TextNode = ({ id, data, isConnectable }) => {
       <div
         className="text-node-wrapper"
         onClick={() => {
-           data.onClickTrigger(id)
+          data.onClickTrigger(id);
         }}
       >
         <div className="text-node-header">
