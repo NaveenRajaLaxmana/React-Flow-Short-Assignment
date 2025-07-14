@@ -12,6 +12,12 @@ Software Engineer
 
 ---
 
+## 🌐 Live Demo
+
+👉 [Click here to view the live app](https://react-flow-short-assignment.vercel.app/)
+
+---
+
 ## 📌 Project Overview
 
 This React-based project utilizes [React Flow](https://reactflow.dev/) to visualize and interact with a dynamic graph of nodes and edges. The project focuses on:
