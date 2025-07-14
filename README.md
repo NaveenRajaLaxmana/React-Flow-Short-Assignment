@@ -37,8 +37,8 @@ This React-based project utilizes [React Flow](https://reactflow.dev/) to visual
 
 ## 🛠️ Tech Stack
 
-- **React** (v18+)
-- **React Flow** (v11+)
+- **React** (v19+)
+- **React Flow** (v12+)
 - **JavaScript / TypeScript** (choose based on your actual use)
 - **CSS / Tailwind** *(optional, based on styling)*
 
